@@ -1,5 +1,6 @@
 package br.edu.utfpr.calculaimc
 
+import br.edu.utfpr.calculaimc.util.calculaimc
 import org.junit.Test
 
 import org.junit.Assert.*
@@ -11,7 +12,12 @@ import org.junit.Assert.*
  */
 class ExampleUnitTest {
     @Test
-    fun addition_isCorrect() {
-        assertEquals(4, 2 + 2)
+    fun imc_is_Correct() {
+        assertTrue(
+            "O valor do IMC está correto?",
+            calculaimc(90.0, 1.90, "pt") in 24.93..24.94)
+
+
+
     }
 }
